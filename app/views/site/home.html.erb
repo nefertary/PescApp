@@ -5,12 +5,12 @@
 			<br>
 			<div class="card">
 				<div class="card-title" align="center">
-					<span>Welcome</span>
+					<span>Bienvenido a PescApp</span>
 				</div>
 				<div class="card-content">
 					<div style="height:400px;background:#ddd;color:white;text-align:center;line-height:400px;">Some stuff</div>
 					<hr>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quis, omnis! Fugiat suscipit voluptatem, ea iure tempore debitis. Sunt saepe non cum voluptatum, amet, itaque consequuntur. Quidem, dignissimos culpa tenetur?</p>
+					<p> ¿No sabes dónde realizar tu jornada de pesca? </p>
 				</div>
 			</div>
 
@@ -25,11 +25,11 @@
 					
 					<%= form_for(@resource, as: :user, url: session_path(:user)) do |f| %>
             <div class="form-group">
-              <%= f.label :email %>
-              <%= f.email_field :email, autofocus: true, :placeholder => "name@example.com", :class => "form-control" %>
+              <%= f.label "Correo electrónico" %>
+              <%= f.email_field :email, autofocus: true, :placeholder => "name@example.colm", :class => "form-control" %>
             </div>
             <div class="form-group">
-              <%= f.label :password %><br />
+              <%= f.label "Contraseña" %><br />
               <%= f.password_field :password, autofocus: true, :placeholder => "********", :class => "form-control" %>
             </div>
           
@@ -45,8 +45,8 @@
 				<div class="card-content">
 
 					<ul>
-						<li><%= link_to "Sign up", new_registration_path(:user) %></li>
-            			<li><%= link_to "Forgot your password?", new_password_path(:user) %></li>  
+						<li><%= link_to "Registrarse", new_registration_path(:user) %></li>
+            			<li><%= link_to "Olvidé mi contraseña", new_password_path(:user) %></li>  
 					</ul>
 					
 				</div>
