@@ -9,6 +9,7 @@
 
 	<div id="map"></div>
 	 <script>
+	 var map;
       function initMap() {
 		  var myLatLng = {lat: -33.5960234, lng: -71.6095457};
 		  map = new google.maps.Map(document.getElementById('map'), {
@@ -38,7 +39,7 @@
 		  map.setCenter(new google.maps.LatLng(lat, lng));
 		    var posIni=new google.maps.LatLng(lat,lng);
 		    var iconBase = 'https://maps.google.com/mapfiles/kml/pal2/';
-		    var iconBase = 'http://maps.google.com/mapfiles/kml/shapes/';
+		    var iconBase = 'http://maps.google.com/mapfiles/kml/shapes/fishing.png';
 		    var fisher = 'http://maps.google.com/mapfiles/kml/paddle/P.png';
 
 		    posInicial = new google.maps.Marker(
@@ -55,6 +56,179 @@
 		          // Quitar comentario para mirar posición
 		          //alertify.success(markers[len][2].getPosition().toString());
 		        });
+		    var posIni=new google.maps.LatLng(-33.382233,-70.3255247);
+		    var text= "Rio Molina"; 
+		    marker = new google.maps.Marker(
+		    {
+		      map:map,
+		      //draggable:true,
+		      animation: google.maps.Animation.DROP,
+		      position: posIni,
+		      icon: iconBase
+		    });
+		    infoWindow = new google.maps.InfoWindow();
+		    infoWindow.setContent(text);
+			infoWindow.setPosition(posIni);
+			google.maps.event.addListener(marker, 'click', function() {
+			  infoWindow.open(map,marker);
+			});
+
+		    var posIni=new google.maps.LatLng(-40.2207334,-72.2449224); 
+		    var text= "Río Calcurrupe";
+		    marker2 = new google.maps.Marker(
+		    {
+		      map:map,
+		      //draggable:true,
+		      animation: google.maps.Animation.DROP,
+		      position: posIni,
+		      icon: iconBase
+		    });
+		    infoWindow2 = new google.maps.InfoWindow();
+		    infoWindow2.setContent(text);
+			infoWindow2.setPosition(posIni);
+			google.maps.event.addListener(marker2, 'click', function() {
+			  infoWindow2.open(map,marker2);
+			});
+
+
+		    var posIni=new google.maps.LatLng(-39.5606101,-72.0101429);
+		    var text= "Río Coñaripe";
+		    marker3 = new google.maps.Marker(
+		    {
+		      map:map,
+		      //draggable:true,
+		      animation: google.maps.Animation.DROP,
+		      position: posIni,
+		      icon: iconBase
+		    });
+		    infoWindow3 = new google.maps.InfoWindow();
+		    infoWindow3.setContent(text);
+			infoWindow3.setPosition(posIni);
+			google.maps.event.addListener(marker3, 'click', function() {
+			  infoWindow3.open(map,marker3);
+			});
+
+		    var posIni=new google.maps.LatLng(-33.8440485,-70.9313171);
+		    var text= "Laguna Aculeo";
+		    marker4 = new google.maps.Marker(
+		    {
+		      map:map,
+		      //draggable:true,
+		      animation: google.maps.Animation.DROP,
+		      position: posIni,
+		      icon: iconBase
+		    });
+		    infoWindow4 = new google.maps.InfoWindow();
+		    infoWindow4.setContent(text);
+			infoWindow4.setPosition(posIni);
+			google.maps.event.addListener(marker4, 'click', function() {
+			  infoWindow4.open(map,marker4);
+			});
+
+		    var posIni=new google.maps.LatLng(-33.4859652,-70.2033845);
+		    var text= "Río Colorado";
+		    marker5 = new google.maps.Marker(
+		    {
+		      map:map,
+		      //draggable:true,
+		      animation: google.maps.Animation.DROP,
+		      position: posIni,
+		      icon: iconBase
+		    });
+		    infoWindow5 = new google.maps.InfoWindow();
+		    infoWindow5.setContent(text);
+			infoWindow5.setPosition(posIni);
+			google.maps.event.addListener(marker5, 'click', function() {
+			  infoWindow5.open(map,marker5);
+			});
+
+		    var posIni=new google.maps.LatLng(-33.6356024,-70.159459);
+		    var text= "Laguna Negra";
+		    marker6 = new google.maps.Marker(
+		    {
+		      map:map,
+		      //draggable:true,
+		      animation: google.maps.Animation.DROP,
+		      position: posIni,
+		      icon: iconBase
+		    });
+		    infoWindow6 = new google.maps.InfoWindow();
+		    infoWindow6.setContent(text);
+			infoWindow6.setPosition(posIni);
+			google.maps.event.addListener(marker6, 'click', function() {
+			  infoWindow6.open(map,marker6);
+			});
+
+		    var posIni=new google.maps.LatLng(-33.4958158,-70.5653801);
+		    var text= "Rios Caroca Erica";
+		    marker7 = new google.maps.Marker(
+		    {
+		      map:map,
+		      //draggable:true,
+		      animation: google.maps.Animation.DROP,
+		      position: posIni,
+		      icon: iconBase
+		    });
+		    infoWindow7 = new google.maps.InfoWindow();
+		    infoWindow7.setContent(text);
+			infoWindow7.setPosition(posIni);
+			google.maps.event.addListener(marker7, 'click', function() {
+			  infoWindow7.open(map,marker7);
+			});
+
+		    var posIni=new google.maps.LatLng(-33.4956582,-70.5653807);
+		    var text= "Estero Covarrubias";
+		    marker8 = new google.maps.Marker(
+		    {
+		      map:map,
+		      //draggable:true,
+		      animation: google.maps.Animation.DROP,
+		      position: posIni,
+		      icon: iconBase
+		    });
+		    infoWindow8 = new google.maps.InfoWindow();
+		    infoWindow8.setContent(text);
+			infoWindow8.setPosition(posIni);
+			google.maps.event.addListener(marker8, 'click', function() {
+			  infoWindow8.open(map,marker8);
+			});
+
+		    var posIni=new google.maps.LatLng(-33.6436449,-70.0872528);
+		    var text= "Embalse el Yeso";
+		    marker9 = new google.maps.Marker(
+		    {
+		      map:map,
+		      //draggable:true,
+		      animation: google.maps.Animation.DROP,
+		      position: posIni,
+		      icon: iconBase
+		    });
+		    infoWindow9 = new google.maps.InfoWindow();
+		    infoWindow9.setContent(text);
+			infoWindow9.setPosition(posIni);
+			google.maps.event.addListener(marker9, 'click', function() {
+			  infoWindow9.open(map,marker9);
+			});
+
+		    var posIni=new google.maps.LatLng(-39.5606101,-72.0101429);
+		    var text= "Río Coñaripe";
+		    marker10 = new google.maps.Marker(
+		    {
+		      map:map,
+		      //draggable:true,
+		      animation: google.maps.Animation.DROP,
+		      position: posIni,
+		      icon: iconBase
+		    });
+		    infoWindow10 = new google.maps.InfoWindow();
+		    infoWindow10.setContent(text);
+			infoWindow10.setPosition(posIni);
+			google.maps.event.addListener(marker10, 'click', function() {
+			  infoWindow10.open(map,marker10);
+			});
+
+		    
+
 		}
     </script>
     <script async defer
