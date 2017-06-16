@@ -14,9 +14,12 @@
  */
 
 // Bootstrap
-@import "bootstrap-sprockets";
-@import "bootstrap";
 @import "bootstrap/variables";
+// Materialice
+@import "materialize/components/color";
+$primary-color: color("blue", "darken-3") !default;
+$secondary-color: color("white", "base") !default;
+@import 'materialize';
 
 // Font Awesome
 @import "font-awesome-sprockets";
