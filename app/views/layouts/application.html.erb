@@ -7,7 +7,7 @@
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
 </head>
-<body>
+<body class="blue-grey lighten-2">
 		<nav>
 			<div class="nav-wrapper">
 			  <a href="#"><%= link_to root_path do %><%= image_tag('logos/logo2.png', alt: 'Logo PescApp', class: 'logo-pescapp')%><% end %></a>
@@ -39,18 +39,15 @@
 		      </ul>
 			</div>
 		</nav>
-			</header>
-			<section id="body" class="container">
-				<div class="breadcrumb">
-					<%= render_breadcrumbs :tag => :li, :separator => "" %>
-				</div>
+			<section id="body" class="indigo lighten-4">
+				<br>
 				<%= yield %>
 			</section>
-			<footer>
+			<footer class="lighten-2 white-text">
 				<div class="container">
 				<div class="row">
-					<div class="col-sm-6">This is a text</div>
-					<div class="col-sm-6 text-right">0.0.1</div>
+					<div class="col-sm-6">PescApp</div>
+					<div class="col-sm-6 text-right">V 1.0</div>
 				</div>
 				</div>
 			</footer>

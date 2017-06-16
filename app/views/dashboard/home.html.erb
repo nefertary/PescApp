@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container">
 	<h2>PescApp</h2>
 	   <style>
        #map {
@@ -8,6 +8,7 @@
     </style>
 
 	<div id="map"></div>
+	<br><br>
 	 <script>
 	 var map;
       function initMap() {
@@ -210,8 +211,8 @@
 			  infoWindow9.open(map,marker9);
 			});
 
-		    var posIni=new google.maps.LatLng(-39.5606101,-72.0101429);
-		    var text= "Río Coñaripe";
+		    var posIni=new google.maps.LatLng(-35.674,-71.2661887);
+		    var text= "Lago Colbún";
 		    marker10 = new google.maps.Marker(
 		    {
 		      map:map,
@@ -227,7 +228,90 @@
 			  infoWindow10.open(map,marker10);
 			});
 
-		    
+		   	var posIni=new google.maps.LatLng(-34.467295,-71.3809417);
+		    var text= "Ríos Tinguiririca y Azufre";
+		    marker11 = new google.maps.Marker(
+		    {
+		      map:map,
+		      //draggable:true,
+		      animation: google.maps.Animation.DROP,
+		      position: posIni,
+		      icon: iconBase
+		    });
+		    infoWindow11 = new google.maps.InfoWindow();
+		    infoWindow11.setContent(text);
+			infoWindow11.setPosition(posIni);
+			google.maps.event.addListener(marker11, 'click', function() {
+			  infoWindow11.open(map,marker11);
+			});
+			
+			var posIni=new google.maps.LatLng(-34.133333,-71.5021887);
+		    var text= "Lago Rapel";
+		    marker12 = new google.maps.Marker(
+		    {
+		      map:map,
+		      //draggable:true,
+		      animation: google.maps.Animation.DROP,
+		      position: posIni,
+		      icon: iconBase
+		    });
+		    infoWindow12 = new google.maps.InfoWindow();
+		    infoWindow12.setContent(text);
+			infoWindow12.setPosition(posIni);
+			google.maps.event.addListener(marker12, 'click', function() {
+			  infoWindow12.open(map,marker12);
+			});
+			
+			var posIni=new google.maps.LatLng(-34.069593,-70.8788642);
+		    var text= "Puerto Inglés";
+		    marker13 = new google.maps.Marker(
+		    {
+		      map:map,
+		      //draggable:true,
+		      animation: google.maps.Animation.DROP,
+		      position: posIni,
+		      icon: iconBase
+		    });
+		    infoWindow13 = new google.maps.InfoWindow();
+		    infoWindow13.setContent(text);
+			infoWindow13.setPosition(posIni);
+			google.maps.event.addListener(marker13, 'click', function() {
+			  infoWindow13.open(map,marker13);
+			});
+			
+			var posIni=new google.maps.LatLng(-36.8090012,-73.1744972);
+		    var text= "Desembocadura Rio Bio-Bio";
+		    marker14 = new google.maps.Marker(
+		    {
+		      map:map,
+		      //draggable:true,
+		      animation: google.maps.Animation.DROP,
+		      position: posIni,
+		      icon: iconBase
+		    });
+		    infoWindow14 = new google.maps.InfoWindow();
+		    infoWindow14.setContent(text);
+			infoWindow14.setPosition(posIni);
+			google.maps.event.addListener(marker14, 'click', function() {
+			  infoWindow14.open(map,marker14);
+			});
+			
+			var posIni=new google.maps.LatLng(-32.7149,-71.4829652);
+		    var text= "Playa del Horcon";
+		    marker15 = new google.maps.Marker(
+		    {
+		      map:map,
+		      //draggable:true,
+		      animation: google.maps.Animation.DROP,
+		      position: posIni,
+		      icon: iconBase
+		    });
+		    infoWindow15 = new google.maps.InfoWindow();
+		    infoWindow15.setContent(text);
+			infoWindow15.setPosition(posIni);
+			google.maps.event.addListener(marker15, 'click', function() {
+			  infoWindow15.open(map,marker15);
+			}); 
 
 		}
     </script>

@@ -7,7 +7,7 @@
 	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	  <%= csrf_meta_tags %>
 	</head>
-	<body>
+	<body class="blue-grey lighten-2">
 	  <nav>
 	    <div class="container nav-wrapper">
 	      <a href="#"><%= link_to root_path do %><%= image_tag('logos/logo2.png', alt: 'Logo PescApp', class: 'logo-pescapp')%><% end %></a>
@@ -18,21 +18,23 @@
 	      </ul>
 	    </div>
 	  </nav>
-	<section id="body">
+	<section id="body" class="indigo lighten-4">
 		<%= yield %>
 	</section>
+	<div  class="blue-grey lighten-2 white-text" >
+		
 			<section id="footer-ghost"></section>
 			<footer>
 				<div class="container">
-					<hr>
 					<div class="row">
-						<div class="col-sm-6">
-							<%= link_to "¿Cómo funciona?", site_how_path %> •
-							<%= link_to "Soporte", site_terms_path %>
+						<div class="col-sm-6" class="footer-links">
+							<%= link_to "¿Cómo funciona?", site_how_path, style: "color: #fff;" %> •
+							<%= link_to "Soporte", site_terms_path, style: "color: #fff;" %>
 						</div>
 						<div class="col-sm-6 text-right">Ruby on Rails 4.2.5 boilerplate, 2016</div>
 					</div>
 				</div>
 			</footer>
+	</div>
 	</body>
 </html>
