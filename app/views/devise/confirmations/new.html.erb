@@ -1,0 +1,40 @@
+<div class="container">
+  
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="panel-title">Reenviar instrucciones</div>
+        </div>
+        <div class="panel-body">
+        
+					<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+					  <%= devise_error_messages! %>
+
+					  <div class="form-group">
+					    <%= f.label :email %>
+					    <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), :class => "form-control", :placeholder => "name@example.com" %>
+					  </div>
+
+					  <div class="actions">
+					    <%= f.submit "Reenviar instrucciones de confirmación", :class => "btn btn-primary float-right" %>
+					  </div>
+					<% end %>
+
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <ul>
+            <li><%= link_to "Ingresar", new_session_path(resource_name) %></li>
+            <li><%= link_to "Registro", new_registration_path(resource_name) %></li>
+            <li><%= link_to "¿No recibe el correo de confirmación?", new_confirmation_path(resource_name) %></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

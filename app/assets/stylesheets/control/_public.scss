@@ -1,0 +1,11 @@
+body > #wrapper {
+	min-height: 100%;
+
+	#footer-ghost { height: 81px; }
+	> footer {
+		position: absolute;
+		bottom: 0px;
+		padding-bottom: 20px;
+		width: 100%;
+	}
+}
