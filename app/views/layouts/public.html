@@ -10,7 +10,7 @@
 	<body>
 	  <nav>
 	    <div class="container nav-wrapper">
-	      <a href="#" class="brand-logo"><%= link_to root_path, :class => "navbar-brand" do %>PesCapp<% end %></a>
+	      <a href="#"><%= link_to root_path do %><%= image_tag('logos/logo2.png', alt: 'Logo PescApp', class: 'logo-pescapp')%><% end %></a>
 	      <ul id="nav-mobile" class="right hide-on-med-and-down">
 	        <li><%= link_to root_path do %> <i class="fa fa-home"></i> Home<% end %></li>
 			<li><%= link_to site_how_path do %> <i class="fa fa-info"></i> How it works<% end %></li>

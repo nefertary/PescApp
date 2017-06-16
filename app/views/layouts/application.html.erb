@@ -2,79 +2,52 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Control</title>
+	<title>PescApp</title>
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
 </head>
 <body>
-	<div id="wrapper-sidebar">
-
-		<!-- Sidebar -->
-		<div id="sidebar-wrapper">
-			<ul class="sidebar-nav">
-				<li class="sidebar-brand">
-					Boilerplate
+		<nav>
+			<div class="nav-wrapper">
+			  <a href="#"><%= link_to root_path do %><%= image_tag('logos/logo2.png', alt: 'Logo PescApp', class: 'logo-pescapp')%><% end %></a>
+			  <ul id="nav-mobile" class="right hide-on-med-and-down">
+			  	<li class="dropdown">
+					<a class='dropdown-button btn' href='#' data-activates='dropdown1'><%= current_user.email %> <span class="caret"></span></a>
+					<ul id='dropdown1' class='dropdown-content'>
+						<li><a href="#"><i class="fa fa-user"></i> My account</a></li>
+						<li><a href="#"><i class="fa fa-question-circle"></i> Help</a></li>
+						<li role="separator" class="divider"></li>
+						<li><%= link_to destroy_user_session_path, :method => :delete do %> <i class="fa fa-sign-out"></i> Sign out<% end %></li>
+					</ul>
 				</li>
-				<div class="sidebar-menu">
-					<li><a href="#">Dashboard</a></li>
-					<li><a href="#">Shortcuts</a></li>
-					<li><a href="#">Overview</a></li>
-					<li><a href="#">Events</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Services</a></li>
-					<li><a href="#">Contact</a></li>
-				</div>
-			</ul>
-		</div>
-
-		<!-- Page Content -->
-		<div id="page-content-wrapper">
-			<header>
-				
-				<nav class="navbar navbar-default navbar-fixed-top">
-					<div class="container-fluild">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-							<%= link_to root_path, :class => "navbar-brand" do %>Boilerplate<% end %>
-						</div>
-
-						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav">
-								<li><a id="menu-toggle" href="">Toggle</a></li>
-							</ul>
-
-							<ul class="nav navbar-nav navbar-right">
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><%= current_user.email %> <span class="caret"></span></a>
-									<ul class="dropdown-menu">
-										<li><a href="#"><i class="fa fa-user"></i> My account</a></li>
-										<li><a href="#"><i class="fa fa-question-circle"></i> Help</a></li>
-										<li role="separator" class="divider"></li>
-										<li><%= link_to destroy_user_session_path, :method => :delete do %> <i class="fa fa-sign-out"></i> Sign out<% end %></li>
-									</ul>
-								</li>
-							</ul>
-						</div><!-- /.navbar-collapse -->
-					</div><!-- /.container-fluid -->
-				</nav>
-
+			  </ul>
+	        	<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-list"></i></a>
+			  <ul class="side-nav" id="mobile-demo">
+		        <li><div class="userView">
+			      <div class="background">
+			        <%= image_tag('logos/back.JPG', alt: 'Back PescApp', class: 'back-image')%>
+			      </div>
+			      <a href="#"><%= image_tag('logos/user.JPG', alt: 'Back PescApp', class: 'circle')%></a>
+			      <a href="#"><span class="white-text name">John Doe</span></a>
+			      <a href="#"><span class="white-text email">jdandturk@gmail.com</span></a>
+			    </div></li>
+			    <li><a href="#"><i class="fa fa-user"></i> My account</a></li>
+				<li><a href="#"><i class="fa fa-question-circle"></i> Help</a></li>
+				<li role="separator" class="divider"></li>
+				<li><%= link_to destroy_user_session_path, :method => :delete do %> <i class="fa fa-sign-out"></i> Sign out<% end %></li>
+		      </ul>
+			</div>
+		</nav>
 			</header>
-			<section id="body">
+			<section id="body" class="container">
 				<div class="breadcrumb">
 					<%= render_breadcrumbs :tag => :li, :separator => "" %>
 				</div>
 				<%= yield %>
 			</section>
 			<footer>
-				<div class="container-fluid">
+				<div class="container">
 				<div class="row">
 					<div class="col-sm-6">This is a text</div>
 					<div class="col-sm-6 text-right">0.0.1</div>
@@ -82,15 +55,10 @@
 				</div>
 			</footer>
 		</div>
-
-		
-	</div>
-
 	<script>
-		$("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper-sidebar").toggleClass("toggled");
-    });
+		
+    $(".button-collapse").sideNav();
+         $('.dropdown-button').dropdown();
 	</script>
 </body>
 </html>

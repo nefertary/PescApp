@@ -17,7 +17,7 @@
 @import "bootstrap/variables";
 // Materialice
 @import "materialize/components/color";
-$primary-color: color("blue", "darken-3") !default;
+$primary-color: color("blue", "darken-2") !default;
 $secondary-color: color("white", "base") !default;
 @import 'materialize';
 
@@ -38,4 +38,12 @@ body {
 	position: relative;
 	height: 100%;
 	font-family: 'Lato';
+}
+.logo-pescapp{
+	width: 90px;
+	margin-top: -25px;
+	margin-left: 10px;
+}
+.back-image{
+	width: 100%;
 }
