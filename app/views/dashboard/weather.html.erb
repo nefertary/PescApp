@@ -2,8 +2,25 @@
 	<div class="col m4 s1"></div>  
 	<div class="col m4 s10 card"> 
 		<br>
-		<div class="card-title">Clima</div>
-		<div class="card-body">
+		<div class="card-title" align="center">Clima</div>
+		<div class="card-body" align="center">
+		<% 
+			prng = Random.new
+			number = prng.rand(30)
+			if number > 15
+				text = "Soleado"
+				icon= "sun-o yellow-text"
+			else
+				text = "Nublado"
+				icon= "cloud blue-text"
+			end
+		%>
+		<p class="grey-text">
+			<%= number %> °
+		</p>
+		<i class="fa fa-<%= icon %> fa-5x"></i>
+		<br>
+		<b><%= text %></b>
 		</div>
 	</div>
 	<br>
