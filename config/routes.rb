@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   get 'dashboard/home'
-
+  get 'dashboard/catalog'
+  get 'dashboard/configuration'
+  get 'dashboard/info'
+  get 'dashboard/notices'
+  get 'dashboard/weather'
+  get 'dashboard/profile'
+  get 'dashboard/help'
   get 'site/home', :path => "/"
 
   get 'site/how', :path => "/how-it-works"
