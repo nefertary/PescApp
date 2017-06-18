@@ -1,0 +1,8 @@
+
+<p class="grey-text"><%= image_tag("users/"+@commentt.image, alt: 'image-comment', class: 'comment-image ')%>
+ <%= @commentt.user %>  a las <%= l(  @commentt.date , format: '%H:%M:%S de %d-%m-%Y') %></p>
+<b>
+  <%= @commentt.body %>
+  
+</b>  
+<hr>

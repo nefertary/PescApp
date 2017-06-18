@@ -4,32 +4,32 @@
 		<br>
 		<div class="card-title grey-text" align="center">John Doe</div>
 		<div class="card-body">
-		<div class="userView" align="center">
-		      <%= image_tag('logos/user.JPG', alt: 'Back PescApp', class: 'circle user-image')%>
-		      <br>
-		      <span class="grey-text email"><%= current_user.email %></span><br>
-		      <%= image_tag('stars.png', alt: 'stars', class: '')%>
-		      
-		</div>
-		<table class="table">
-			<tr>
-				<td>En PescApp desde:</td>
-				<td><%= l(current_user.created_at, format: '%d-%m-%Y %H:%M:%S') %></td>
-			</tr>
-			<tr>
-				<td>Lugar de pesca preferido</td>
-				<td>Lago Colbún, Talca</td>
-			</tr>
-			<tr>
-				<td>Ultima pesca:</td>
-				<td>San Antonio</td>
-			</tr>
-			<tr>
-				<td>Número de pescas exitosas</td>
-				<td>290</td>
-			</tr>
-			
-		</table>
+			<div class="userView" align="center">
+			      <%= image_tag('logos/user.JPG', alt: 'Back PescApp', class: 'circle user-image')%>
+			      <br>
+			      <span class="grey-text email"><%= current_user.email %></span><br>
+			      <%= image_tag('stars.png', alt: 'stars', class: '')%>
+			      
+			</div>
+			<table class="table">
+				<tr>
+					<td>En PescApp desde:</td>
+					<td><%= l(current_user.created_at, format: '%d-%m-%Y %H:%M:%S') %></td>
+				</tr>
+				<tr>
+					<td>Lugar de pesca preferido</td>
+					<td>Lago Colbún, Talca</td>
+				</tr>
+				<tr>
+					<td>Ultima pesca:</td>
+					<td>San Antonio</td>
+				</tr>
+				<tr>
+					<td>Número de pescas exitosas</td>
+					<td>290</td>
+				</tr>
+				
+			</table>
 		</div>
 	</div>
 	<br>

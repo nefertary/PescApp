@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   get 'dashboard/home'
   get 'dashboard/catalog'
   get 'dashboard/configuration'

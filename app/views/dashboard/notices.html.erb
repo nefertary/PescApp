@@ -1,11 +1,36 @@
 <div class="row">
-	<div class="col m4 s1"></div>  
-	<div class="col m4 s10 card"> 
+	<div class="col m1 s1"></div>  
+	<div class="col m10 s10 card"> 
 		<br>
-		<div class="card-title">Noticias</div>
-		<div class="card-body">
-		</div>
+		<div class="card-title" align="center">Noticias</div>
+		
+			<% @notices.each do |notice|
+				@notice = notice
+				%>
+				<div class="card"> 
+					<br>
+					<h6 class="grey-text"><%= notice.user %> a las <%= l( notice.date , format: '%H:%M:%S de %d-%m-%Y') %></h6>
+					<div class="card-content">
+						<div class="row">
+							<div class="col s6 m6">
+								 <%= image_tag("notices/"+notice.image, alt: 'image', class: 'notice-image ')%>
+							</div>
+							<div class="col s6 m6">
+								<%= notice.body %>
+							</div>
+						</div>
+					</div>
+					<% notice.comments.each do |commentt|
+						@commentt = commentt%>
+						<%= render 'comments/show', locals: { commentt: @commentt}%>
+					<%end%>
+
+					<%= render 'comments/form', locals: { notice: @notice}%>
+				</div>	
+			<%end%>
+			<br>
+		
 	</div>
 	<br>
-	<div class="col m4 s1"></div> 
+	<div class="col m1 s1"></div> 
 </div>

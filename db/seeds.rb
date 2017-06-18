@@ -5,4 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-User.create!({ email: "mariolopezlandes@gmail.com", password: "mario123", password_confirmation: "mario123" })
+8.times do |n|
+  Notice.create!({ user: "John Doe", date: Time.now, body: "Mi pesca del día!", image: (n.to_s+".jpg") })
+end

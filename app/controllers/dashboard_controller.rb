@@ -22,6 +22,8 @@ class DashboardController < ApplicationController
   def notices
   	add_breadcrumb "Dashboard", dashboard_home_path
   	add_breadcrumb "Noticias"
+    @notices = Notice.all
+    @comment = Comment.new
   end
   
   def weather
