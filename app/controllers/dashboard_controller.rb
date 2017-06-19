@@ -21,7 +21,7 @@ class DashboardController < ApplicationController
   
   def notices
   	add_breadcrumb "Dashboard", dashboard_home_path
-  	add_breadcrumb "Noticias"
+  	add_breadcrumb "Social"
     @notices = Notice.all
     @comment = Comment.new
   end
@@ -29,6 +29,11 @@ class DashboardController < ApplicationController
   def weather
   	add_breadcrumb "Dashboard", dashboard_home_path
   	add_breadcrumb "Clima"
+  end
+
+  def news
+    add_breadcrumb "Dashboard", dashboard_home_path
+    add_breadcrumb "Noticias"
   end
 
 end

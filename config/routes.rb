@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'dashboard/weather'
   get 'dashboard/profile'
   get 'dashboard/help'
+  get 'dashboard/news'
   get 'site/home', :path => "/"
 
   get 'site/how', :path => "/how-it-works"
