@@ -12,6 +12,13 @@ class DashboardController < ApplicationController
   def configuration
   	add_breadcrumb "Dashboard", dashboard_home_path
   	add_breadcrumb "Configuración"
+    @notices = Notice.all
+    num = 1
+    @notices.each do |notice|
+      notice.user = "Usuario "+ num.to_s
+      notice.save
+      num+=1
+    end 
   end
   
   def info
