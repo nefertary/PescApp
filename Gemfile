@@ -18,7 +18,7 @@ gem 'font-awesome-sass', '~> 4.5.0'
 gem 'devise'
 gem 'devise-i18n'
 gem 'breadcrumbs_on_rails'
-
+gem 'rails_12factor', group: :production
 group :development, :test do
   gem 'rspec-rails', '~>3.0'
   gem 'rails-erd'
