@@ -1,5 +1,5 @@
 class SiteController < ApplicationController
-  before_action :authenticate_user!, except: [:home, :how, :terms]
+  before_action :authenticate_user!, except: [:home, :how, :terms, :team]
   layout "public"
 
   def home
@@ -11,5 +11,8 @@ class SiteController < ApplicationController
   end
 
   def terms
+  end
+
+  def team
   end
 end

@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   get 'site/terms', :path => "/terms-conditions"
 
+  get 'site/team', :path => "/team"
+
   devise_for :users, path: '/', path_names: { 
     sign_in: 'login', 
     sign_out: 'logout', 
