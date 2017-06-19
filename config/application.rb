@@ -31,9 +31,6 @@ module Control
     config.action_mailer.smtp_settings = {
       :address              => "smtp.webfaction.com",
       :port                 => 587,
-      :domain               => 'conexus.cl',
-      :user_name            => 'soporte_conexus',
-      :password             => '1388ffa2731388ffa273',
       :authentication       => 'plain',
       :enable_starttls_auto => true
     } 
